@@ -1,0 +1,9 @@
+SELECT student_schedule.student_id, student_schedule.course_id, course.course_code, instructor.first_name, instructor.last_name, course.num_credits
+FROM  student_schedule
+JOIN student 
+ON student_schedule.student_id = student.student_id
+JOIN course
+ON student_schedule.course_id = course.course_id
+JOIN instructor
+ON course.instructor_id = instructor.instructor_id
+WHERE student.student_id = '1';
