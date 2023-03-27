@@ -1,0 +1,5 @@
+SELECT instructor.first_name, instructor.last_name, sum(course.num_credits) AS 'Credits'
+FROM course 
+JOIN instructor 
+ON instructor.instructor_id = course.instructor_id
+GROUP BY course.instructor_id;
